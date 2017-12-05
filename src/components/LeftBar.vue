@@ -98,6 +98,9 @@
         console.log(browserHeight);
   	    return leftBarMain.style.height = browserHeight+'px';
       }
+    },
+    mounted(){
+      this.setHeight()
     }
   }
 </script>
