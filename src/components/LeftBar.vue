@@ -1,5 +1,11 @@
 <template>
   <div id="leftBar">
+    <!-- 收缩按钮 -->
+    <el-radio-group v-model="isCollapse" style="position: absolute;">
+      <el-radio-button :label="false"><i class="el-icon-d-arrow-right"></i></el-radio-button>
+      <el-radio-button :label="true"><i class="el-icon-d-arrow-left"></i></el-radio-button>
+    </el-radio-group>
+    <!-- 菜单列表 -->
     <el-menu id="leftBarMain" default-active="1-4-1" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" :collapse="isCollapse">
       <el-menu-item index="1">
         <i class="el-icon-menu"></i>
@@ -60,18 +66,12 @@
         <span slot="title">管理模块</span>
       </el-menu-item>
     </el-menu>
-    <!-- 收缩按钮 -->
-    <el-radio-group v-model="isCollapse" style="position: absolute;">
-      <el-radio-button :label="false"><i class="el-icon-d-arrow-right"></i></el-radio-button>
-      <el-radio-button :label="true"><i class="el-icon-d-arrow-left"></i></el-radio-button>
-    </el-radio-group>
   </div>
 </template>
 
 <style>
   .el-menu-vertical-demo:not(.el-menu--collapse) {
     width: 200px;
-    min-height: 400px;
   }
   .el-radio-button.is-active {
     display: none;
@@ -100,7 +100,7 @@
       }
     },
     mounted(){
-      this.setHeight()
+      console.log('hi')
     }
   }
 </script>
