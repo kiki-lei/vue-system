@@ -450,6 +450,10 @@ babel-plugin-check-es2015-constants@^6.22.0:
   dependencies:
     babel-runtime "^6.22.0"
 
+babel-plugin-component@^0.10.1:
+  version "0.10.1"
+  resolved "http://registry.npm.taobao.org/babel-plugin-component/download/babel-plugin-component-0.10.1.tgz#cfac25045e5c6e1353e89f05ff5a675af9712759"
+
 babel-plugin-syntax-async-functions@^6.8.0:
   version "6.13.0"
   resolved "http://registry.npm.taobao.org/babel-plugin-syntax-async-functions/download/babel-plugin-syntax-async-functions-6.13.0.tgz#cad9cad1191b5ad634bf30ae0872391e0647be95"
@@ -5451,6 +5455,10 @@ vue-template-es2015-compiler@^1.6.0:
 vue@^2.5.2:
   version "2.5.9"
   resolved "http://registry.npm.taobao.org/vue/download/vue-2.5.9.tgz#b2380cd040915dca69881dafd121d760952e65f7"
+
+vuex@^3.0.1:
+  version "3.0.1"
+  resolved "http://registry.npm.taobao.org/vuex/download/vuex-3.0.1.tgz#e761352ebe0af537d4bb755a9b9dc4be3df7efd2"
 
 watchpack@^1.4.0:
   version "1.4.0"

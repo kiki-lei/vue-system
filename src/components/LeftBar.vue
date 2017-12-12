@@ -1,7 +1,7 @@
 <template>
   <div id="leftBar">
     <!-- 收缩按钮 -->
-    <el-radio-group v-model="isCollapse" style="position: absolute;">
+    <el-radio-group id="close-bar-btn" v-model="isCollapse" style="position: absolute;">
       <el-radio-button :label="false"><i class="el-icon-d-arrow-right"></i></el-radio-button>
       <el-radio-button :label="true"><i class="el-icon-d-arrow-left"></i></el-radio-button>
     </el-radio-group>
@@ -31,10 +31,24 @@
         </el-submenu>
       </el-submenu>
       <!-- 3 -->
-      <el-menu-item index="3">
-        <i class="el-icon-setting"></i>
-        <span slot="title">资金管理</span>
-      </el-menu-item>
+      <el-submenu index="3">
+        <template slot="title">
+          <i class="el-icon-setting"></i>
+          <span slot="title">资金管理</span>
+        </template>
+        <el-menu-item-group>
+          <span slot="title">分组一</span>
+          <el-menu-item index="1-1">选项1</el-menu-item>
+          <el-menu-item index="1-2">选项2</el-menu-item>
+        </el-menu-item-group>
+        <el-menu-item-group title="分组2">
+          <el-menu-item index="1-3">选项3</el-menu-item>
+        </el-menu-item-group>
+        <el-submenu index="1-4">
+          <span slot="title">选项4</span>
+          <el-menu-item index="1-4-1">选项1</el-menu-item>
+        </el-submenu>
+      </el-submenu>
       <!-- 4 -->
       <el-menu-item index="4">
         <i class="el-icon-setting"></i>
@@ -100,7 +114,7 @@
       }
     },
     mounted(){
-      console.log('hi')
+      // console.log('hi')
     }
   }
 </script>

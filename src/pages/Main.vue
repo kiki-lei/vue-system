@@ -5,12 +5,15 @@
         <header-top></header-top>
       </el-header>
       <el-container>
-        <el-aside id="LeftBarBox">
+        <div id="Left-bar-box">
           <left-bar></left-bar>
-        </el-aside>
+        </div>
         <el-container>
           <el-main>
-            <div id="mainBox"></div>
+            <div id="main-box">
+              <Breadcrumb></Breadcrumb>
+              <pagination></pagination>
+            </div>
           </el-main>
           <el-footer>
             <footer-bottom></footer-bottom>
@@ -22,15 +25,19 @@
 </template>
 
 <script>
-import HeaderTop from '../components/HeaderTop';
-import FooterBottom from '../components/FooterBottom';
-import LeftBar from '../components/LeftBar';
+import HeaderTop from '../components/HeaderTop'
+import FooterBottom from '../components/FooterBottom'
+import LeftBar from '../components/LeftBar'
+import Pagination from '../components/Pagination'
+import Breadcrumb from '../components/Breadcrumb'
 
 export default{
   components:{
     HeaderTop,
     FooterBottom,
-    LeftBar
+    LeftBar,
+    Pagination,
+    Breadcrumb
   }
 }
 </script>
@@ -47,7 +54,7 @@ export default{
     line-height: 200px;
   }
   
-  #LeftBarBox {
+  #Left-bar-box {
     width: auto!important;
   }
 
@@ -57,7 +64,7 @@ export default{
     text-align: center;
     line-height: 160px;
   }
-  #mainBox {
+  #main-box {
     padding: 20px;
     background-color: #fff;
   }
