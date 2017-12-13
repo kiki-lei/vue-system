@@ -11,7 +11,7 @@
       <el-dropdown-menu slot="dropdown" class="choose-item">
         <el-dropdown-item>个人设置</el-dropdown-item>
         <el-dropdown-item disabled>系统设置</el-dropdown-item>
-        <el-dropdown-item divided>退出</el-dropdown-item>
+        <el-dropdown-item divided><router-link to="/">退出</router-link></el-dropdown-item>
       </el-dropdown-menu>
     </el-dropdown>
     
@@ -23,6 +23,18 @@
 
   </div>
 </template>
+
+<script>
+export default {
+  methods:{
+    isLoginOut: function () {
+      alert('hi')
+      this.$router.push({ path: '/' }) 
+    }
+  }
+}
+</script>
+
 
 <style>
 #header-top {

@@ -13,6 +13,7 @@
         </el-form-item>
         <el-form-item>
           <el-button type="primary" @click="submitForm('loginForm')">立即创建</el-button>
+          <!-- <el-button type="primary" v-on:click="isLogin">立即创建</el-button> -->
           <el-button @click="resetForm('loginForm')">取消</el-button>
         </el-form-item>
       </el-form>
@@ -51,26 +52,12 @@
         this.$refs[formName].validate((valid) => {
           if (valid) {
             alert('submit!');
-            this.$http.post('http://localhost:8080/users?username='+this.name+'&password='+this.password).then((response) => { 
-          //这里在isLogin方法中先判断一下后台返回的是否为空值，如果不是然后提交后台返回的值。
-          //注意这里是个难点，Vuex与Vue-Resource结合使用。 
-          if(response.body != null & response.body.length > 0){ 
-            this.$store.commit('isLogin',response.body[0]);
-            this.name=''
-            this.password= ''
             this.$router.push({ path: 'main' }) 
-          }else{
-            alert('请输入正确的用户名和密码！！！');
-            this.name=''
-            this.password= ''
-          }
-          
-        }).then((error)=> this.error = error)
-          }else {
+          } else {
             console.log('error submit!!');
             return false;
           }
-        })
+        });
       },
       resetForm(formName) {
         this.$refs[formName].resetFields();
@@ -92,7 +79,6 @@
           
         }).then((error)=> this.error = error)
       }
-
     }
   }
 </script>

@@ -12,10 +12,11 @@ import 'element-ui/lib/theme-chalk/index.css'
 
 Vue.use(ElementUI)
 Vue.use(Vuex)
+
 Vue.prototype.$http = axios
 
 // 模拟数据
-require('./moke.js')
+// require('./moke.js')
 
 Vue.config.productionTip = false
 
