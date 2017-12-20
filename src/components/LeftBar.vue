@@ -90,13 +90,16 @@
   .el-radio-button.is-active {
     display: none;
   }
+  #close-bar-btn {
+    z-index: 1;
+  }
 </style>
 
 <script>
   export default {
     data() {
       return {
-        isCollapse: true
+        isCollapse: false
       };
     },
     methods: {

@@ -6,11 +6,12 @@
     <!-- 下拉菜单 -->
     <el-dropdown class="choose-box">
       <span class="el-dropdown-link">
-        <img src="../../static/img/headImg.png" alt="用户头像" id="head-img"> 显示用户名<i class="el-icon-arrow-down el-icon--right"></i>
+        <img src="../../static/img/headImg.png" alt="用户头像" id="head-img"> Admin <i class="el-icon-arrow-down el-icon--right"></i>
       </span>
       <el-dropdown-menu slot="dropdown" class="choose-item">
-        <el-dropdown-item>个人设置</el-dropdown-item>
-        <el-dropdown-item disabled>系统设置</el-dropdown-item>
+        <el-dropdown-item>系统设置</el-dropdown-item>
+        <el-dropdown-item>清理缓存</el-dropdown-item>
+        <el-dropdown-item><message-box></message-box></el-dropdown-item>
         <el-dropdown-item divided><router-link to="/">退出</router-link></el-dropdown-item>
       </el-dropdown-menu>
     </el-dropdown>
@@ -25,7 +26,12 @@
 </template>
 
 <script>
+import MessageBox from '../components/MessageBox'
+
 export default {
+  components:{
+    MessageBox
+  },
   methods:{
     isLoginOut: function () {
       alert('hi')
