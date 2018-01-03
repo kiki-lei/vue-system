@@ -21,6 +21,9 @@
         promise: '' // 保存promise对象
       }
     },
+    computed: {
+      
+    },
     methods: {
       open2() {
         this.$confirm('是否需要清理缓存?', '提示', {
